@@ -15,6 +15,25 @@ with open(os.path.join(__location__, 'Countries.csv')) as f:
     for r in rows:
         countries.append(dict(r))
 
+Titanic = []
+with open(os.path.join(__location__, 'Titanic.csv')) as f:
+    rows = csv.DictReader(f)
+    for r in rows:
+        Titanic.append(dict(r))
+
+Players = []
+with open(os.path.join(__location__, 'Players.csv')) as f:
+    rows = csv.DictReader(f)
+    for r in rows:
+        Players.append(dict(r))
+    
+Teams = []
+with open(os.path.join(__location__, 'Teams.csv')) as f:
+    rows = csv.DictReader(f)
+    for r in rows:
+        Teams.append(dict(r))
+    
+
 class DB:
     def __init__(self):
         self.database = []
